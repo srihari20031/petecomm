@@ -1,67 +1,10 @@
 // Example import, adjust as per your image paths
 import PetCard from "../_components/PetCard";
-import ParakeetImage from "../../public/Parkeet.jpg";
-import CanaryImage from "../../public/Canary.jpg";
-import CockatielImage from "../../public/Cocktiel.jpg";
-import LovebirdImage from "../../public/Lovebirds.jpg";
-import BudgerigarImage from "../../public/Budgerigar.jpg";
-import FinchImage from "../../public/Finch.jpg";
-import ParrotletImage from "../../public/Parrotlet.jpg";
-import CockatooImage from "../../public/CockatooImage.jpg";
+import { birds } from "../_constants";
+
 
 const page = () => {
-  const birds = [
-    {
-      id: 1,
-      name: "Parakeet",
-      price: "$50",
-      image: ParakeetImage,
-    },
-    {
-      id: 2,
-      name: "Canary",
-      price: "$40",
-      image: CanaryImage,
-    },
-    {
-      id: 3,
-      name: "Cockatiel",
-      price: "$60",
-      image: CockatielImage,
-    },
-    {
-      id: 4,
-      name: "Lovebird",
-      price: "$45",
-      image: LovebirdImage,
-    },
-    {
-      id: 5,
-      name: "Budgerigar",
-      price: "$35",
-      image: BudgerigarImage,
-    },
-    {
-      id: 6,
-      name: "Finch",
-      price: "$30",
-      image: FinchImage,
-    },
-    {
-      id: 7,
-      name: "Parrotlet",
-      price: "$55",
-      image: ParrotletImage,
-    },
-    {
-      id: 8,
-      name: "Cockatoo",
-      price: "$100",
-      image: CockatooImage,
-    },
-  ];
-
-  console.log(birds);
+ 
 
   return (
     <div className="py-20">
