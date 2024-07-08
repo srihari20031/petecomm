@@ -1,23 +1,18 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaMobile } from "react-icons/fa";
 
 interface PetCardProps {
   name: string;
   price: string;
-  image: string; // Adjust this type based on your image type
+  image: StaticImageData;
 }
 
-const PetCard: React.FC<PetCardProps> = ({
-  name,
-  price,
-  image,
-}) => {
+const PetCard: React.FC<PetCardProps> = ({ name, price, image }) => {
   return (
     <div className="border rounded-2xl p-4 mb-4  text-[#5a4030] shadow-lg">
       <Image
         src={image}
         alt={name}
-      
         className=" rounded-lg mx-auto w-[500px] h-[300px]"
       />
       <div className=" text-center">

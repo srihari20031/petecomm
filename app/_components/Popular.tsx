@@ -14,7 +14,6 @@ const Popular = () => {
               key={pet.id}
               name={pet.name}
               price={pet.price}
-              description={pet.description}
               image={pet.image}
             />
           ))}

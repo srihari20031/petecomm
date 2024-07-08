@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
-import Footer from "./_components/Footer";
+// import Footer from "./_components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "700"] });
@@ -25,7 +25,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         </body>
-        <Footer currentYearProp="2024" />
+        {/* <Footer currentYearProp="2024" /> */}
     </html>
   );
 }

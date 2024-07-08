@@ -1,28 +1,39 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React, { useState, ChangeEvent } from "react";
+import Image, { StaticImageData } from "next/image";
 import HeroImg from "../../public/cute-animals-group-white-background.png";
 import { FaSearch } from "react-icons/fa";
 import { petCategories } from "../_constants";
 import { useRouter } from "next/navigation";
 
-// Assuming the searchPets function is defined in another file
+interface Pet {
+  id: string;
+  name: string;
+  image: StaticImageData;
+  price: string;
+}
+
+
+
+type PetCategory = "Dogs and Cats" | "Birds" | "Fishes" | "Other Animals";
 
 const Hero = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchResults, setSearchResults] = useState<Pet[]>([]);
   const router = useRouter();
 
   const handlePetClick = (petId: string) => {
     router.push(`/pet/${petId}`);
   };
 
-  const searchPets = (term: String) => {
-    const results = [];
+  const searchPets = (term: string): Pet[] => {
+    const results: Pet[] = [];
     const lowerCaseSearchTerm = term.toLowerCase();
 
-    for (const category in petCategories) {
+    const categories = Object.keys(petCategories) as PetCategory[];
+
+    for (const category of categories) {
       const pets = petCategories[category];
 
       for (const pet of pets) {
@@ -35,7 +46,7 @@ const Hero = () => {
     return results;
   };
 
-  const handleSearch = (event: any) => {
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value;
     setSearchTerm(term);
     if (term) {
