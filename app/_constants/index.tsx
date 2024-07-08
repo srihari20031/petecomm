@@ -1,5 +1,5 @@
 import DogsandCats from "../../public/Catdog.jpg";
-import Birds from "../../public/Birds.jpg";
+import Piegeon from "../../public/Birds.jpg";
 import Sea from "../../public/Sea.jpg";
 import Other from "../../public/Other.jpg";
 import GoldenRet from "../../public/GoldenRet.jpg";
@@ -46,7 +46,7 @@ export const CategoriesData = [
     alt: "Dogandcats",
     link: "/dogsandcats",
   },
-  { id: 2, name: "Birds", image: Birds, alt: "Birds", link: "/birds" },
+  { id: 2, name: "Birds", image: Piegeon, alt: "Birds", link: "/birds" },
   {
     id: 3,
     name: "Fishes",
