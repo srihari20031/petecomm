@@ -5,7 +5,7 @@ const getAllPets = () => {
   return Object.values(petCategories).flat();
 };
 
-const page = () => {
+const Page = () => {
   const allPets = getAllPets();
   return (
     <div className="py-20">
@@ -13,7 +13,7 @@ const page = () => {
         <h1 className="text-4xl font-bold mb-12 text-center text-[#7a5c43]">
           Other Animals
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
           {allPets.map((pet) => (
             <PetCard
               key={pet.id}
@@ -28,4 +28,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
