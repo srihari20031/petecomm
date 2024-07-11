@@ -6,7 +6,7 @@ import { sections } from "../_constants";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { petCategories } from "../_constants";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Pet {
   id: string;
